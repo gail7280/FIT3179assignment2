@@ -1,0 +1,71 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "hconcat": [
+        {
+            "width": 200,
+            "height": 400,
+            "title": "Top 5 Gold Winning Countries",
+            "data": {
+            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/gold_top.csv"
+            },
+            "mark": {"type": "arc", "innerRadius": 50},
+            "encoding": {
+                "theta": {"field": "gold", "type": "quantitative"},
+                "color": {"field": "Country", "type": "nominal"},
+                "tooltip": [
+                    {
+                    "field": "Country", 
+                    "type": "nominal"},
+                    {
+                    "field": "gold", 
+                    "type": "quantitative",
+                    "title": "Gold Medals"}
+                ]
+            } 
+        },
+        {
+            "width": 200,
+            "height": 400,
+            "title": "Top 5 Bronze Winning Countries",
+            "data": {
+                "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/bronze_top.csv"
+            },
+            "mark": {"type": "arc", "innerRadius": 50},
+            "encoding": {
+                "theta": {"field": "bronze", "type": "quantitative"},
+                "color": {"field": "Country", "type": "nominal"},
+                "tooltip": [
+                    {
+                      "field": "Country", 
+                      "type": "nominal"},
+                    {
+                      "field": "bronze", 
+                      "type": "quantitative",
+                      "title": "Bronze Medals"}
+                ]
+            }
+        },
+        {
+            "width": 200,
+            "height": 400,
+            "title": "Top 5 Silver Winning Countries",
+            "data": {
+                "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/silver_top.csv"
+            },
+            "mark": {"type": "arc", "innerRadius": 50},
+            "encoding": {
+                "theta": {"field": "silver", "type": "quantitative"},
+                "color": {"field": "Country", "type": "nominal"},
+                "tooltip": [
+                    {
+                    "field": "Country", 
+                    "type": "nominal"},
+                    {
+                    "field": "silver", 
+                    "type": "quantitative",
+                    "title": "Silver Medals"}
+                ]
+            }
+        }
+    ]
+}
