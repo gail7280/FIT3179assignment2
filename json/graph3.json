@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "hconcat": [
         {
-            "width": 200,
+            "width": 250,
             "height": 400,
             "title": "Top 5 Gold Winning Countries",
             "data": {
@@ -24,7 +24,7 @@
             } 
         },
         {
-            "width": 200,
+            "width": 250,
             "height": 400,
             "title": "Top 5 Silver Winning Countries",
             "data": {
@@ -46,7 +46,7 @@
             }
         },
         {
-            "width": 200,
+            "width": 250,
             "height": 400,
             "title": "Top 5 Bronze Winning Countries",
             "data": {
