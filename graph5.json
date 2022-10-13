@@ -1,0 +1,23 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 200,
+    "height": 400,
+    "title": "Top 10 Bronze Winning Countries",
+    "data": {
+        "url": "https://raw.githubusercontent.com/gail7280/FIT3179A2/main/bronze_top.csv"
+    },
+    "mark": {"type": "arc", "innerRadius": 50},
+    "encoding": {
+        "theta": {"field": "bronze", "type": "quantitative"},
+        "color": {"field": "Country", "type": "nominal"},
+        "tooltip": [
+            {
+              "field": "Country", 
+              "type": "nominal"},
+            {
+              "field": "bronze", 
+              "type": "quantitative",
+              "title": "Bronze Medals"}
+        ]
+    }
+}
