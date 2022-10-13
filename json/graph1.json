@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/country_count.csv"
+    "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/country_count.csv"
   },
   "hconcat": [
     {
@@ -12,7 +12,7 @@
       "layer": [
         {
           "data": {
-            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/oceans.topojson",
+            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/oceans.topojson",
             "format": {
               "type": "topojson", "feature": "oceans"
             }
@@ -21,7 +21,7 @@
         },
         {
           "data": {
-            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/ne_110m_graticules_30.topojson",
+            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/ne_110m_graticules_30.topojson",
             "format": {
               "type": "topojson", "feature": "ne_110m_graticules_30"
             }
@@ -30,7 +30,7 @@
         },
         {
           "data": {
-            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/ne_110m_admin_0_countries.topojson",
+            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/ne_110m_admin_0_countries.topojson",
             "format": {
               "type": "topojson", "feature": "ne_110m_admin_0_countries"
             }
@@ -39,7 +39,7 @@
         },
         {
           "data": {
-            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/ne_110m_admin_0_countries.topojson",
+            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/ne_110m_admin_0_countries.topojson",
             "format": {
               "type": "topojson",
               "feature": "ne_110m_admin_0_countries"
@@ -54,7 +54,7 @@
               "lookup": "properties.NAME",
               "from": {
                 "data": {
-                  "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/country_count.csv"
+                  "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/country_count.csv"
                 },
                 "key": "Country",
                 "fields": ["count"]

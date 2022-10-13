@@ -6,7 +6,7 @@
             "height": 400,
             "title": "Top 5 Gold Winning Countries",
             "data": {
-            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/gold_top.csv"
+            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/gold_top.csv"
             },
             "mark": {"type": "arc", "innerRadius": 50, "stroke": "white"},
             "encoding": {
@@ -28,7 +28,7 @@
             "height": 400,
             "title": "Top 5 Silver Winning Countries",
             "data": {
-                "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/silver_top.csv"
+                "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/silver_top.csv"
             },
             "mark": {"type": "arc", "innerRadius": 50, "stroke": "white"},
             "encoding": {
@@ -50,7 +50,7 @@
             "height": 400,
             "title": "Top 5 Bronze Winning Countries",
             "data": {
-                "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/bronze_top.csv"
+                "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/bronze_top.csv"
             },
             "mark": {"type": "arc", "innerRadius": 50, "stroke": "white"},
             "encoding": {
