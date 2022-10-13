@@ -8,10 +8,10 @@
             "data": {
             "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/gold_top.csv"
             },
-            "mark": {"type": "arc", "innerRadius": 50},
+            "mark": {"type": "arc", "innerRadius": 50, "stroke": "white"},
             "encoding": {
                 "theta": {"field": "gold", "type": "quantitative"},
-                "color": {"field": "Country", "type": "nominal"},
+                "color": {"field": "Country", "type": "nominal", "scale": {"scheme": "yelloworangebrown"}},
                 "tooltip": [
                     {
                     "field": "Country", 
@@ -26,36 +26,14 @@
         {
             "width": 200,
             "height": 400,
-            "title": "Top 5 Bronze Winning Countries",
-            "data": {
-                "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/bronze_top.csv"
-            },
-            "mark": {"type": "arc", "innerRadius": 50},
-            "encoding": {
-                "theta": {"field": "bronze", "type": "quantitative"},
-                "color": {"field": "Country", "type": "nominal"},
-                "tooltip": [
-                    {
-                      "field": "Country", 
-                      "type": "nominal"},
-                    {
-                      "field": "bronze", 
-                      "type": "quantitative",
-                      "title": "Bronze Medals"}
-                ]
-            }
-        },
-        {
-            "width": 200,
-            "height": 400,
             "title": "Top 5 Silver Winning Countries",
             "data": {
                 "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/silver_top.csv"
             },
-            "mark": {"type": "arc", "innerRadius": 50},
+            "mark": {"type": "arc", "innerRadius": 50, "stroke": "white"},
             "encoding": {
                 "theta": {"field": "silver", "type": "quantitative"},
-                "color": {"field": "Country", "type": "nominal"},
+                "color": {"field": "Country", "type": "nominal", "scale": {"scheme": "yelloworangebrown"}},
                 "tooltip": [
                     {
                     "field": "Country", 
@@ -64,6 +42,28 @@
                     "field": "silver", 
                     "type": "quantitative",
                     "title": "Silver Medals"}
+                ]
+            }
+        },
+        {
+            "width": 200,
+            "height": 400,
+            "title": "Top 5 Bronze Winning Countries",
+            "data": {
+                "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/bronze_top.csv"
+            },
+            "mark": {"type": "arc", "innerRadius": 50, "stroke": "white"},
+            "encoding": {
+                "theta": {"field": "bronze", "type": "quantitative"},
+                "color": {"field": "Country", "type": "nominal", "scale": {"scheme": "yelloworangebrown"}},
+                "tooltip": [
+                    {
+                      "field": "Country", 
+                      "type": "nominal"},
+                    {
+                      "field": "bronze", 
+                      "type": "quantitative",
+                      "title": "Bronze Medals"}
                 ]
             }
         }
