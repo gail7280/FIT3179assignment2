@@ -3,55 +3,39 @@
     "width": 500,
     "height": 400,
     "title": "Medal Summary",
-    "data": {
-        "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/ath_medal_count.csv"
+    "data": {"url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/ath_medal_count.csv"},
+    "mark": {
+      "type": "line",
+      "point": true
     },
-    "params": [
-        {
-            "name": "Year_selection",
-            "value": 1992,
-            "bind": {
-                "input": "range",
-                "min": 1992,
-                "max": 2008,
-                "step": 4,
-                "name": "Year: "
-            }
-        }
-    ],
-    "transform": [
-        {"filter": "datum.Year == Year_selection"}
-    ],
-    "mark": "circle",
     "encoding": {
-        "x": {
-            "field": "ath_num",
-            "type": "quantitative",
-            "title": "Athletes Count",
-            "scale": {"type": "log", "domain": [1, 200]}
-        },
-        "y": {
-            "field": "medal",
-            "type": "quantitative",
-            "title": "Medal Count",
-            "scale": {"type": "log", "domain": [1, 200]}
-        },
-        "color": {
-            "field": "Country", 
-            "type": "nominal",
-            "legend": null
-        },
-        "size": {
-            "field": "gold",
-            "type": "quantitative",
-            "legend": null
-        },
-        "tooltip": [
-            {"field": "Year", "type": "ordinal"},
-            {"field": "Country", "type": "nominal"},
-            {"field": "ath_num", "type": "quantitative", "title": "Athlete Count"},
-            {"field": "medal", "type": "quantitative", "title": "Medal Count"},
-            {"field": "gold", "type": "quantitative", "title": "Gold Medal Count"}
-        ]
-    }
-}
+      "x": {
+          "timeUnit": "year", 
+          "field": "Year", 
+          "title": "Athletes Count"
+          },
+      "y": {
+          "field": "medal", 
+          "type": "quantitative", 
+          "title": "Medal Count"
+          },
+      "color": {
+          "field": "Country", 
+          "type": "nominal", 
+          "scale":{
+              "range": ["#648FFF", "#785EF0", "#DC267F", "#FE6100", "#FFB000"]
+              }
+          },
+      "tooltip": [
+              {"field": "Country", "type": "nominal"},
+              {"field": "ath_num", "type": "quantitative", "title": "Athlete Count"},
+              {"field": "medal", "type": "quantitative", "title": "Medal Count"}
+          ]
+    },
+    "transform": [
+          {
+              "filter": "datum['Country'] == 'China' || datum['Country'] == 'France' || datum['Country'] == 'Russia' || datum['Country'] == 'United Kingdom' || datum['Country'] == 'United States'"
+          }
+      ]
+  }
+  
