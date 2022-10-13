@@ -5,7 +5,7 @@
   },
   "hconcat": [
     {
-      "width": 550,
+      "width": 500,
       "height": 400,
       "title": "World Map of Olympic Medal Counts",
       "projection": {"type": "equalEarth", "rotate":[-150,0,0]},

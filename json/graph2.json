@@ -27,12 +27,14 @@
         "x": {
             "field": "ath_num",
             "type": "quantitative",
-            "title": "Athletes Count"
+            "title": "Athletes Count",
+            "scale": {"type": "log", "domain": [1, 200]}
         },
         "y": {
             "field": "medal",
             "type": "quantitative",
-            "title": "Medal Count"
+            "title": "Medal Count",
+            "scale": {"type": "log", "domain": [1, 200]}
         },
         "color": {
             "field": "Country", 
