@@ -11,7 +11,7 @@
     "encoding": {
       "x": {"field": "Year", "axis": {"labelAngle": 0}},
       "y": {"field": "count", "type": "quantitative", "title": "Medal Counts"},
-      "color": {"field": "Gender", "type": "nominal"},
+      "color": {"field": "Gender", "type": "nominal", "scale":{"range": ["#FFB000", "#FE6100"]}},
       "tooltip": [
         {"field": "Year", "type": "ordinal"},
         {"field": "Gender", "type": "nominal"},
