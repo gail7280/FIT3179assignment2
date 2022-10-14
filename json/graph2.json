@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 450,
+    "width": 430,
     "height": 400,
     "title": "Country Medal Summary",
     "data": {"url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/ath_medal_count.csv"},
