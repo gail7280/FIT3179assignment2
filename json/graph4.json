@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
+    "width": 450,
     "height": 400,
     "title": "Gender Medal Summary",
     "data": {"url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/yearly_gender_medal.csv"},
