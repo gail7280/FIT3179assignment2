@@ -1,0 +1,22 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 400,
+    "title": "Gender Medal Summary",
+    "data": {"url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/yearly_gender_medal.csv"},
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "encoding": {
+      "x": {"field": "Year", "axis": {"labelAngle": 0}},
+      "y": {"field": "count", "type": "quantitative", "title": "Medal Counts"},
+      "color": {"field": "Gender", "type": "nominal"},
+      "tooltip": [
+        {"field": "Year", "type": "ordinal"},
+        {"field": "Gender", "type": "nominal"},
+        {"field": "count", "type": "quantitative", "title": "Medal Count"}
+      ]
+    }
+  }
+  
