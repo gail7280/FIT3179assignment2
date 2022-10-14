@@ -1,16 +1,34 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 400,
+    "width": 500,
     "height": 400,
     "title": "Medal Summary",
     "data": {"url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/ath_medal_count.csv"},
-    "selection": {
-        "country_highlight": {
-            "type": "multi",
-            "fields": ["Country"],
-            "bind": "legend"
+    "params": [
+      {
+        "name": "country_select",
+        "bind":{
+          "input": "select",
+          "options":[
+            null,
+            "China",
+            "France",
+            "Russia",
+            "United Kingdom",
+            "United States"
+          ],
+          "labels": [
+            "Show All",
+            "China",
+            "France",
+            "Russia",
+            "United Kingdom",
+            "United States"
+          ],
+          "name": "Country Selection: "
         }
-    },
+      }
+    ],
     "mark": {
       "type": "line",
       "point": true
@@ -33,10 +51,6 @@
               "range": ["#648FFF", "#785EF0", "#DC267F", "#FE6100", "#FFB000"]
               }
           },
-      "opacity": {
-        "condition": {"selection": "country_highlight", "value": 1},
-        "value": 0.3
-          },
       "tooltip": [
               {"field": "Country", "type": "nominal"},
               {"field": "ath_num", "type": "quantitative", "title": "Athlete Count"},
@@ -46,7 +60,8 @@
     "transform": [
           {
               "filter": "datum['Country'] == 'China' || datum['Country'] == 'France' || datum['Country'] == 'Russia' || datum['Country'] == 'United Kingdom' || datum['Country'] == 'United States'"
-          }
+          },
+          {"filter": "country_select == null || datum.Country == country_select"}
     ]
   }
   
