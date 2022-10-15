@@ -9,6 +9,25 @@
     "mark": {
         "type": "bar"
     },
+    "params": [
+        {
+            "name": "gender_select",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Men",
+                    "Women"
+                ],
+                "labels": [
+                    "Show All",
+                    "Male",
+                    "Female"
+                ],
+                "name": "Gender Selection: "
+            }
+        }
+    ],
     "encoding": {
         "x": {
             "field": "Year",
@@ -46,5 +65,10 @@
                 "title": "Medal Count"
             }
         ]
-    }
+    },
+    "transform": [
+        {
+            "filter": "gender_select == null || datum.Gender == gender_select"
+        }
+    ]
 }

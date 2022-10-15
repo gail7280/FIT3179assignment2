@@ -3,65 +3,85 @@
     "width": 430,
     "height": 400,
     "title": "Country Medal Summary",
-    "data": {"url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/ath_medal_count.csv"},
+    "data": {
+        "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/ath_medal_count.csv"
+    },
     "params": [
-      {
-        "name": "country_select",
-        "bind":{
-          "input": "select",
-          "options":[
-            null,
-            "China",
-            "France",
-            "Russia",
-            "United Kingdom",
-            "United States"
-          ],
-          "labels": [
-            "Show All",
-            "China",
-            "France",
-            "Russia",
-            "United Kingdom",
-            "United States"
-          ],
-          "name": "Country Selection: "
+        {
+            "name": "country_select",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "China",
+                    "France",
+                    "Russia",
+                    "United Kingdom",
+                    "United States"
+                ],
+                "labels": [
+                    "Show All",
+                    "China",
+                    "France",
+                    "Russia",
+                    "United Kingdom",
+                    "United States"
+                ],
+                "name": "Country Selection: "
+            }
         }
-      }
     ],
     "mark": {
-      "type": "line",
-      "point": true
+        "type": "line",
+        "point": true
     },
     "encoding": {
-      "x": {
-          "timeUnit": "year", 
-          "field": "Year", 
-          "title": "Athletes Count"
-          },
-      "y": {
-          "field": "medal", 
-          "type": "quantitative", 
-          "title": "Medal Count"
-          },
-      "color": {
-          "field": "Country", 
-          "type": "nominal", 
-          "scale":{
-              "range": ["#FFB000", "#FE6100", "#DC267F", "#785EF0", "#648FFF"]
-              }
-          },
-      "tooltip": [
-              {"field": "Country", "type": "nominal"},
-              {"field": "ath_num", "type": "quantitative", "title": "Athlete Count"},
-              {"field": "medal", "type": "quantitative", "title": "Medal Count"}
-          ]
+        "x": {
+            "timeUnit": "year",
+            "field": "Year",
+            "title": "Athletes Count"
+        },
+        "y": {
+            "field": "medal",
+            "type": "quantitative",
+            "title": "Medal Count"
+        },
+        "color": {
+            "field": "Country",
+            "type": "nominal",
+            "scale": {
+                "range": [
+                    "#FFB000",
+                    "#FE6100",
+                    "#DC267F",
+                    "#785EF0",
+                    "#648FFF"
+                ]
+            }
+        },
+        "tooltip": [
+            {
+                "field": "Country",
+                "type": "nominal"
+            },
+            {
+                "field": "ath_num",
+                "type": "quantitative",
+                "title": "Athlete Count"
+            },
+            {
+                "field": "medal",
+                "type": "quantitative",
+                "title": "Medal Count"
+            }
+        ]
     },
     "transform": [
-          {
-              "filter": "datum['Country'] == 'China' || datum['Country'] == 'France' || datum['Country'] == 'Russia' || datum['Country'] == 'United Kingdom' || datum['Country'] == 'United States'"
-          },
-          {"filter": "country_select == null || datum.Country == country_select"}
+        {
+            "filter": "datum['Country'] == 'China' || datum['Country'] == 'France' || datum['Country'] == 'Russia' || datum['Country'] == 'United Kingdom' || datum['Country'] == 'United States'"
+        },
+        {
+            "filter": "country_select == null || datum.Country == country_select"
+        }
     ]
-  }
-  
+}
