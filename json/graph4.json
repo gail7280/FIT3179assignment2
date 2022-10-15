@@ -3,20 +3,48 @@
     "width": 450,
     "height": 400,
     "title": "Gender Medal Summary",
-    "data": {"url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/yearly_gender_medal.csv"},
+    "data": {
+        "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/yearly_gender_medal.csv"
+    },
     "mark": {
-      "type": "bar"
+        "type": "bar"
     },
     "encoding": {
-      "x": {"field": "Year", "axis": {"labelAngle": 0}},
-      "xOffset": {"field": "Gender"},
-      "y": {"field": "count", "type": "quantitative", "title": "Medal Counts"},
-      "color": {"field": "Gender", "type": "nominal", "scale": {"scheme": "yelloworangebrown"}},
-      "tooltip": [
-        {"field": "Year", "type": "ordinal"},
-        {"field": "Gender", "type": "nominal"},
-        {"field": "count", "type": "quantitative", "title": "Medal Count"}
-      ]
+        "x": {
+            "field": "Year",
+            "axis": {
+                "labelAngle": 0
+            }
+        },
+        "xOffset": {
+            "field": "Gender"
+        },
+        "y": {
+            "field": "count",
+            "type": "quantitative",
+            "title": "Medal Counts"
+        },
+        "color": {
+            "field": "Gender",
+            "type": "nominal",
+            "scale": {
+                "scheme": "yelloworangebrown"
+            }
+        },
+        "tooltip": [
+            {
+                "field": "Year",
+                "type": "ordinal"
+            },
+            {
+                "field": "Gender",
+                "type": "nominal"
+            },
+            {
+                "field": "count",
+                "type": "quantitative",
+                "title": "Medal Count"
+            }
+        ]
     }
-  }
-  
+}

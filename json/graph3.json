@@ -6,22 +6,37 @@
             "height": 400,
             "title": "Top 5 Gold Winning Countries",
             "data": {
-            "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/gold_top.csv"
+                "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/gold_top.csv"
             },
-            "mark": {"type": "arc", "innerRadius": 50, "stroke": "white"},
+            "mark": {
+                "type": "arc",
+                "innerRadius": 50,
+                "stroke": "white"
+            },
             "encoding": {
-                "theta": {"field": "gold", "type": "quantitative"},
-                "color": {"field": "Country", "type": "nominal", "scale": {"scheme": "yelloworangebrown"}},
+                "theta": {
+                    "field": "gold",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "Country",
+                    "type": "nominal",
+                    "scale": {
+                        "scheme": "yelloworangebrown"
+                    }
+                },
                 "tooltip": [
                     {
-                    "field": "Country", 
-                    "type": "nominal"},
+                        "field": "Country",
+                        "type": "nominal"
+                    },
                     {
-                    "field": "gold", 
-                    "type": "quantitative",
-                    "title": "Gold Medals"}
+                        "field": "gold",
+                        "type": "quantitative",
+                        "title": "Gold Medals"
+                    }
                 ]
-            } 
+            }
         },
         {
             "width": 250,
@@ -30,18 +45,33 @@
             "data": {
                 "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/silver_top.csv"
             },
-            "mark": {"type": "arc", "innerRadius": 50, "stroke": "white"},
+            "mark": {
+                "type": "arc",
+                "innerRadius": 50,
+                "stroke": "white"
+            },
             "encoding": {
-                "theta": {"field": "silver", "type": "quantitative"},
-                "color": {"field": "Country", "type": "nominal", "scale": {"scheme": "yelloworangebrown"}},
+                "theta": {
+                    "field": "silver",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "Country",
+                    "type": "nominal",
+                    "scale": {
+                        "scheme": "yelloworangebrown"
+                    }
+                },
                 "tooltip": [
                     {
-                    "field": "Country", 
-                    "type": "nominal"},
+                        "field": "Country",
+                        "type": "nominal"
+                    },
                     {
-                    "field": "silver", 
-                    "type": "quantitative",
-                    "title": "Silver Medals"}
+                        "field": "silver",
+                        "type": "quantitative",
+                        "title": "Silver Medals"
+                    }
                 ]
             }
         },
@@ -52,18 +82,33 @@
             "data": {
                 "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/bronze_top.csv"
             },
-            "mark": {"type": "arc", "innerRadius": 50, "stroke": "white"},
+            "mark": {
+                "type": "arc",
+                "innerRadius": 50,
+                "stroke": "white"
+            },
             "encoding": {
-                "theta": {"field": "bronze", "type": "quantitative"},
-                "color": {"field": "Country", "type": "nominal", "scale": {"scheme": "yelloworangebrown"}},
+                "theta": {
+                    "field": "bronze",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "Country",
+                    "type": "nominal",
+                    "scale": {
+                        "scheme": "yelloworangebrown"
+                    }
+                },
                 "tooltip": [
                     {
-                      "field": "Country", 
-                      "type": "nominal"},
+                        "field": "Country",
+                        "type": "nominal"
+                    },
                     {
-                      "field": "bronze", 
-                      "type": "quantitative",
-                      "title": "Bronze Medals"}
+                        "field": "bronze",
+                        "type": "quantitative",
+                        "title": "Bronze Medals"
+                    }
                 ]
             }
         }
