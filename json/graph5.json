@@ -22,6 +22,7 @@
         "y": {
             "field": "rank",
             "type": "quantitative",
+            "title": "Olympic Rank",
             "scale": {
                 "domain": [
                     "20",
@@ -32,8 +33,8 @@
         "color": {
             "field": "Country",
             "type": "nominal",
-            "scale": {
-                "scheme": "yelloworangebrown"
+            "scale":{
+                "range": ["#FFB000", "#FE6100", "#DC267F", "#785EF0", "#648FFF"]
             }
         },
         "tooltip": [
