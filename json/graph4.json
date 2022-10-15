@@ -9,6 +9,7 @@
     },
     "encoding": {
       "x": {"field": "Year", "axis": {"labelAngle": 0}},
+      "xOffset": {"field": "Gender"},
       "y": {"field": "count", "type": "quantitative", "title": "Medal Counts"},
       "color": {"field": "Gender", "type": "nominal", "scale": {"scheme": "yelloworangebrown"}},
       "tooltip": [
