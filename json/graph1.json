@@ -5,7 +5,7 @@
   },
   "width": 500,
   "height": 400,
-  "title": "World Map of Olympic Medal Counts",
+  "title": "World Map of Olympic Medal Summary",
   "projection": {
     "type": "equalEarth",
     "rotate": [
