@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 450,
+    "height": 400,
+    "title": "Olympic Game Ranking of Permanent Five",
+    "data": {
+        "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/p5_rank.csv"
+    },
+    "mark": {
+        "type": "line",
+        "point": true,
+        "orient": "vertical"
+    },
+    "encoding": {
+        "x": {
+            "field": "Year",
+            "type": "ordinal",
+            "axis": {
+                "labelAngle": 0
+            }
+        },
+        "y": {
+            "field": "rank",
+            "type": "quantitative",
+            "scale": {
+                "domain": [
+                    "20",
+                    "0"
+                ]
+            }
+        },
+        "color": {
+            "field": "Country",
+            "type": "nominal",
+            "scale": {
+                "scheme": "yelloworangebrown"
+            }
+        },
+        "tooltip": [
+            {
+                "field": "Year",
+                "type": "ordinal"
+            },
+            {
+                "field": "Country",
+                "type": "nominal"
+            },
+            {
+                "field": "rank",
+                "type": "quantitative",
+                "title": "Olympic Rank"
+            }
+        ]
+    },
+    "transform": [
+        {
+            "sort": [
+                {
+                    "field": "rank",
+                    "order": "descending"
+                }
+            ]
+        }
+    ]
+}
