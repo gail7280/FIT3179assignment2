@@ -38,8 +38,7 @@
     "encoding": {
         "x": {
             "timeUnit": "year",
-            "field": "Year",
-            "title": "Athletes Count"
+            "field": "Year"
         },
         "y": {
             "field": "medal",
@@ -61,13 +60,12 @@
         },
         "tooltip": [
             {
-                "field": "Country",
+                "field": "Year",
                 "type": "nominal"
             },
             {
-                "field": "ath_num",
-                "type": "quantitative",
-                "title": "Athlete Count"
+                "field": "Country",
+                "type": "nominal"
             },
             {
                 "field": "medal",

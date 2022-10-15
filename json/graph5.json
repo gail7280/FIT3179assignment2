@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 450,
     "height": 400,
-    "title": "Olympic Game Ranking of Permanent Five",
+    "title": "Olympic Game Ranking",
     "data": {
         "url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/p5_rank.csv"
     },
