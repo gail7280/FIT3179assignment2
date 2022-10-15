@@ -5,13 +5,12 @@
     "title": "Gender Medal Summary",
     "data": {"url": "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/data/yearly_gender_medal.csv"},
     "mark": {
-      "type": "line",
-      "point": true
+      "type": "bar"
     },
     "encoding": {
       "x": {"field": "Year", "axis": {"labelAngle": 0}},
       "y": {"field": "count", "type": "quantitative", "title": "Medal Counts"},
-      "color": {"field": "Gender", "type": "nominal", "scale":{"range": ["#FFB000", "#FE6100"]}},
+      "color": {"field": "Gender", "type": "nominal", "scale": {"scheme": "yelloworangebrown"}},
       "tooltip": [
         {"field": "Year", "type": "ordinal"},
         {"field": "Gender", "type": "nominal"},
