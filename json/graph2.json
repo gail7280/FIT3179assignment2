@@ -37,7 +37,6 @@
     },
     "encoding": {
         "x": {
-            "timeUnit": "year",
             "field": "Year"
         },
         "y": {

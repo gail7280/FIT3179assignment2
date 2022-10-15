@@ -1,147 +1,173 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
 
-        <title>
-            FIT3179A2
-        </title>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css"
+        integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
 
-        <link rel="stylesheet" type="text/css" href="/styles.css" media="all">
+    <title>
+        FIT3179A2
+    </title>
 
-    </head>
+    <style>
+        footer {
+            text-align: center;
+            padding: 3px;
+        }
+    </style>
 
-    <body>
-        <div class="page">
+    <link rel="stylesheet" type="text/css" href="/styles.css" media="all">
 
-            <!-- header -->
-            <div style="text-align: center">
-                <h1>
-                    Summer Olympic Summary (1992 - 2008)
-                </h1>
-                <h3>
-                    This visualization includes a range of idioms analyzing the medal statistics of summer Olympic games across 1992 to 2008. <br>
-                    The permanent members of the United Nations Security Council are chosen as sample data and referred as P5 for some idioms.
-                </h3>
-            </div>
-            <hr style="border-top: 5px solid black;"/>
+</head>
 
-            <!-- idiom 1 -->
-            <br>
-            <div class="pure-g">
-                <div class="pure-u-1-3">
-                    <article id="graph1"></article>
-                </div>
-                <div class="pure-u-1-3"></div>
-                <div class="pure-u-1-3">
-                    <p style="font-size: large">
-                        This map presents the total medal counts of all countries worldwide from 1992 to 2008 Olympic games. <br><br>
-                        Among all the countries, <strong>United State of America</strong> has won the most medals with a number of <span class="warning">1311</span>. 
-                        It is the only country with a total number over 1000. <br><br>
-                        <strong>Germany, Australia, Russia</strong> and <strong>China</strong> has also won impressive number of medals over 500.
-                    </p>
-                </div>
-            </div>
-            <br>
-            <hr style="border-top: 1px dashed gray;"/>
+<body>
+    <div class="page">
 
-            <!-- idiom 2 -->
-            <br>
-            <div class="pure-g">
-                <div class="pure-u-1-3">
-                    <article id="graph2"></article>
-                </div>
-                <div class="pure-u-1-3"></div>
-                <div class="pure-u-1-3">
-                    <p style="font-size: large">
-                        This line chart shows the relationship between athlete numbers and medal numbers. <br><br>
-                        By selecting the country name in the drop-down menu, we can see the specific data regarding to these countries.<br><br>
-                        Overall, we can summaries that all the countries seems to <strong>have similar amount</strong> of athletes and number of medals. 
-                        
-                    </p>
-                </div>
-            </div>
-            <br>
-            <hr style="border-top: 1px dashed gray;"/>
-
-            <!-- idiom 5 -->
-            <br>
-            <div class="pure-g">
-                <div class="pure-u-1-3">
-                    <article id="graph5"></article>
-                </div>
-                <div class="pure-u-1-3"></div>
-                <div class="pure-u-1-3">
-                    <p style="font-size: large">
-                        This bump chart shows
-                    </p>
-                </div>
-            </div>
-            <br>
-            <hr style="border-top: 1px dashed gray;"/>
-
-            <!-- idiom 3 -->
-            <br>
-            <div class="pure-g">
-                <div class="pure-u-1-3">
-                    <article id="graph3"></article>
-                </div>
-                </div>
-                <div>
-                    <p style="font-size: large">
-                        From the 3 donut charts we can see that the top 5 countries of winning different medals are very similar.<br><br>
-                        Within all the countries, <strong>United State of America</strong> has won much more medals than other countries.
-    
-                    </p>
-                </div>
-                <br>
-                <hr style="border-top: 1px dashed gray;"/>
-
-                <!-- idiom 4 -->
-                <br>
-                <div class="pure-g">
-                    <div class="pure-u-1-3">
-                        <article id="graph4"></article>
-                    </div>
-                    <div class="pure-u-1-3"></div>
-                    <div class="pure-u-1-3">
-                        <p style="font-size: large">
-                            This line chart shows
-                        </p>
-                    </div>
-                </div>
-                <br>
-                <hr style="border-top: 1px dashed gray;"/>
-            </div>
-            
-            
-            
-            <script type="text/javascript" >
-                var vg_1 = "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/graph1.json";
-                vegaEmbed("#graph1", vg_1).then(function(result) {   
-                }).catch(console.error);
-
-                var vg_2 = "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/graph2.json";
-                vegaEmbed("#graph2", vg_2).then(function(result) {   
-                }).catch(console.error);
-
-                var vg_3 = "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/graph3.json";
-                vegaEmbed("#graph3", vg_3).then(function(result) {   
-                }).catch(console.error);
-
-                var vg_4 = "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/graph4.json";
-                vegaEmbed("#graph4", vg_4).then(function(result) {   
-                }).catch(console.error);
-
-                var vg_5 = "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/graph5.json";
-                vegaEmbed("#graph5", vg_5).then(function(result) {   
-                }).catch(console.error);
-            </script>
-
+        <!-- header -->
+        <div style="text-align: center">
+            <h1>
+                Summer Olympic Summary (1992 - 2008)
+            </h1>
+            <h3>
+                This visualization includes a range of idioms analyzing the medal statistics of summer Olympic games
+                across 1992 to 2008. <br>
+                The permanent members of the United Nations Security Council are chosen as sample data and referred as
+                P5 for some idioms.
+            </h3>
         </div>
-    </body>
+        <hr style="border-top: 5px solid black;" />
+
+        <!-- idiom 1 -->
+        <br>
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <article id="graph1"></article>
+            </div>
+            <div class="pure-u-1-3"></div>
+            <div class="pure-u-1-3">
+                <p style="font-size: large">
+                    This map presents the total medal counts of all countries worldwide from 1992 to 2008 Olympic games.
+                    <br><br>
+                    Among all the countries, <strong>United State of America</strong> has won the most medals with a
+                    number of <span class="warning">1311</span>.
+                    It is the only country with a total number over 1000. <br><br>
+                    <strong>Germany, Australia, Russia</strong> and <strong>China</strong> has also won impressive
+                    number of medals over 500.
+                </p>
+            </div>
+        </div>
+        <br>
+        <hr style="border-top: 1px dashed gray;" />
+
+        <!-- idiom 2 -->
+        <br>
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <article id="graph2"></article>
+            </div>
+            <div class="pure-u-1-3"></div>
+            <div class="pure-u-1-3">
+                <p style="font-size: large">
+                    This line chart shows the relationship between athlete numbers and medal numbers. <br><br>
+                    By selecting the country name in the drop-down menu, we can see the specific data regarding to these
+                    countries.<br><br>
+                    Overall, we can summaries that all the countries seems to <strong>have similar amount</strong> of medals.
+
+                </p>
+            </div>
+        </div>
+        <br>
+        <hr style="border-top: 1px dashed gray;" />
+
+        <!-- idiom 5 -->
+        <br>
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <article id="graph5"></article>
+            </div>
+            <div class="pure-u-1-3"></div>
+            <div class="pure-u-1-3">
+                <p style="font-size: large">
+                    This bump chart shows the rank change over time between P5. <br><br>
+                    By selecting the country name in the drop-down menu, we can see the trend regarding to only the selected country.<br><br>
+                    We can see that <strong>United States of America</strong> was always the <strong>top one</strong> country at the end of every 
+                    summer Olympic game.
+                </p>
+            </div>
+        </div>
+        <br>
+        <hr style="border-top: 1px dashed gray;" />
+
+        <!-- idiom 3 -->
+        <br>
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <article id="graph3"></article>
+            </div>
+        </div>
+        <div>
+            <p style="font-size: large">
+                From the 3 donut charts we can see that the top 5 countries of winning different medals are very
+                similar.<br><br>
+                Within all the countries, <strong>United State of America</strong> has won much more medals than other
+                countries.
+
+            </p>
+        </div>
+        <br>
+        <hr style="border-top: 1px dashed gray;" />
+
+        <!-- idiom 4 -->
+        <br>
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <article id="graph4"></article>
+            </div>
+            <div class="pure-u-1-3"></div>
+            <div class="pure-u-1-3">
+                <p style="font-size: large">
+                    This bar chart shows the number of participated males and females in each Olympic game.<br><br>
+                    By selecting the gender from the drop-down menu, we can filter out the data of only one gender.<br><br>
+                    Across 5 Olympic games, the number of participated male athletes are <strong>consistent</strong>, yet 
+                    there is a <strong>increasing trend</strong> with the number of female athletes.
+                </p>
+            </div>
+        </div>
+        <br>
+        <hr style="border-top: 1px dashed gray;" />
+    </div>
+
+    <script type="text/javascript">
+        var vg_1 = "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/graph1.json";
+        vegaEmbed("#graph1", vg_1).then(function (result) {
+        }).catch(console.error);
+
+        var vg_2 = "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/graph2.json";
+        vegaEmbed("#graph2", vg_2).then(function (result) {
+        }).catch(console.error);
+
+        var vg_3 = "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/graph3.json";
+        vegaEmbed("#graph3", vg_3).then(function (result) {
+        }).catch(console.error);
+
+        var vg_4 = "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/graph4.json";
+        vegaEmbed("#graph4", vg_4).then(function (result) {
+        }).catch(console.error);
+
+        var vg_5 = "https://raw.githubusercontent.com/gail7280/FIT3179assignment2/main/json/graph5.json";
+        vegaEmbed("#graph5", vg_5).then(function (result) {
+        }).catch(console.error);
+    </script>
+
+    </div>
+</body>
+
+<footer class="text-center">
+    <p>Authorised by Zichuan Zhang</p>
+    <a href="https://www.kaggle.com/datasets/divyansh22/summer-olympics-medals">Data source</a>
+</footer>
 
 </html>
